@@ -14,7 +14,7 @@ jobs:
           mobileprovision: https://github.com/binhtranvan176/expo-vti/raw/main/cert/Sun%20Life%20Everbright%20Life%20Insurance%20Co.,Ltd.mobileprovision
           cert_p12: https://github.com/binhtranvan176/expo-vti/raw/main/cert/Sun%20Life%20Everbright%20Life%20Insurance%20Co.,Ltd.p12
           p12_pass: AppleP12.com
-          signing_identity: Iphone Distributed: Sun Life Everbright Life Insurance Co.,Ltd.p12
+          signing_identity: "Iphone Distributed: Sun Life Everbright Life Insurance Co.,Ltd.p12"
       - uses: actions/upload-artifact@v2
         with:
           name: ipa
