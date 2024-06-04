@@ -1,0 +1,21 @@
+name: Resign
+
+on: workflow_dispatch
+
+jobs:
+  iOS:
+    name: iOS
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: bradyjoslin/ios-resign-action@v1
+        with:
+          ipa_path: https://github.com/binhtranvan176/expo-vti/raw/main/resign_20240514152858713.ipa
+          mobileprovision: https://github.com/binhtranvan176/expo-vti/raw/main/cert/Sun%20Life%20Everbright%20Life%20Insurance%20Co.,Ltd.mobileprovision
+          cert_p12: https://github.com/binhtranvan176/expo-vti/raw/main/cert/Sun%20Life%20Everbright%20Life%20Insurance%20Co.,Ltd.p12
+          p12_pass: AppleP12.com
+          signing_identity: Iphone Distributed: Sun Life Everbright Life Insurance Co.,Ltd.p12
+      - uses: actions/upload-artifact@v2
+        with:
+          name: ipa
+          path: ./**.ipa
